@@ -15,10 +15,7 @@ public class PrimeiroMetodo {
 		
 		System.out.println("Escolha dentre os cursos abaixo: ");
 		
-		for(int i = 0; i < cursos.length; i++) {
-			
-			System.out.println("[" + i + "]" + cursos[i]);
-		}
+		iterarEExibirPosicoesDoVetorString(cursos);
 		
 		System.out.print("O curso que você deseja é o: ");
 		Integer posicaoCursoEscolhido = teclado.nextInt();
@@ -28,12 +25,9 @@ public class PrimeiroMetodo {
 		
 		if (!posicaoValida) {
 			
-<<<<<<< HEAD
+
 			encerrarProgramaPorCausaDePosicaoInvalida();
-=======
-			System.err.println("Posição inválida!");
-			System.exit(1);
->>>>>>> d0a1eceb5a84b9f344b51e83b6d107ff692421d8
+
 			
 			imprimirTraco();
 			
@@ -41,9 +35,8 @@ public class PrimeiroMetodo {
 					{ "Cartão", "Boleto "};
 			
 			System.out.println("Escolha uma forma de pagamento: ");
-			for(int i = 0; i < formasPagamento.length; i++) {
-				System.out.println("[" + i + "]" + formasPagamento[i]);
-			}
+			
+			iterarEExibirPosicoesDoVetorString(formasPagamento);
 			
 			System.out.print("Sua forma de pagamento escolhida é: ");
 			Integer posicaoFormaPagamentoEscolhida = teclado.nextInt();
@@ -52,13 +45,8 @@ public class PrimeiroMetodo {
 					&& posicaoFormaPagamentoEscolhida < formasPagamento.length;
 			
 			if (!posicaoValida) {
-<<<<<<< HEAD
 				encerrarProgramaPorCausaDePosicaoInvalida();
-=======
-				System.err.println("Posição inválida!");
-				System.exit(1);
->>>>>>> d0a1eceb5a84b9f344b51e83b6d107ff692421d8
-			}
+	        }
 			
 			String cursoEscolhido = cursos[posicaoCursoEscolhido];
 			String formaPagamentoEscolhida = formasPagamento[posicaoFormaPagamentoEscolhida];
@@ -71,17 +59,24 @@ public class PrimeiroMetodo {
 		}
 		
 	}
+	
+	static void iterarEExibirPosicoesDoVetorString(String[] vetor) {
+        for(int i = 0; i < vetor.length; i++) {
+            System.out.println("[" + i + "] " + vetor[i]);
+        }
+    }
+	
+	
 	static void imprimirTraco() {
 
 		System.out.println("--------------------------------------");
 	}
-<<<<<<< HEAD
+
 	
 	static void encerrarProgramaPorCausaDePosicaoInvalida() {
         System.err.println("Posição inválida!");
         System.exit(1);
     }
-=======
->>>>>>> d0a1eceb5a84b9f344b51e83b6d107ff692421d8
+
 
 }
