@@ -28,7 +28,12 @@ public class PrimeiroMetodo {
 		
 		if (!posicaoValida) {
 			
+<<<<<<< HEAD
 			encerrarProgramaPorCausaDePosicaoInvalida();
+=======
+			System.err.println("Posição inválida!");
+			System.exit(1);
+>>>>>>> d0a1eceb5a84b9f344b51e83b6d107ff692421d8
 			
 			imprimirTraco();
 			
@@ -47,7 +52,12 @@ public class PrimeiroMetodo {
 					&& posicaoFormaPagamentoEscolhida < formasPagamento.length;
 			
 			if (!posicaoValida) {
+<<<<<<< HEAD
 				encerrarProgramaPorCausaDePosicaoInvalida();
+=======
+				System.err.println("Posição inválida!");
+				System.exit(1);
+>>>>>>> d0a1eceb5a84b9f344b51e83b6d107ff692421d8
 			}
 			
 			String cursoEscolhido = cursos[posicaoCursoEscolhido];
@@ -65,10 +75,13 @@ public class PrimeiroMetodo {
 
 		System.out.println("--------------------------------------");
 	}
+<<<<<<< HEAD
 	
 	static void encerrarProgramaPorCausaDePosicaoInvalida() {
         System.err.println("Posição inválida!");
         System.exit(1);
     }
+=======
+>>>>>>> d0a1eceb5a84b9f344b51e83b6d107ff692421d8
 
 }
