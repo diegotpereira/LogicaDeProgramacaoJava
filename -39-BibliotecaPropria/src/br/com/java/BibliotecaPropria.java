@@ -1,0 +1,22 @@
+package br.com.java;
+
+import br.com.java.modelo.Interacao;
+
+public class BibliotecaPropria {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Interacao interacao = new Interacao();
+		
+		Integer numero = interacao.lerNumero("Digite um número: ");
+		interacao.imprimir("Número: " + numero);
+		
+		Double decimal = interacao.lerDecimal("Digite um número decimal: ");
+		interacao.imprimir("Decimal: " + decimal);
+		
+		interacao.erro("Essa é uma mensagem de erro!");
+		
+		interacao.fechar();
+	}
+
+}
