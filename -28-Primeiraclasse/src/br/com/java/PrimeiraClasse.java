@@ -12,9 +12,6 @@ public class PrimeiraClasse {
 		produto.setQuantidade(15);
 		
 		exibirQuantidadeEmEstoque(produto);
-		
-		
-		
 
 	}
 	
