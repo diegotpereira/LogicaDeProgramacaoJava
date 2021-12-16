@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
-	xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Home</title>
+    <meta charset="ISO-8859-1">
+    <title>Home</title>
+
+    <!-- estilização -->
+    <link rel="stylesheet" th:href="@{/css/estilo.css}" />
 </head>
+
 <body>
-     <header>
-	     <nav>
-		     <ul>
-		         <li><a th:href="@{/}">Home</a>
-		         <li><a th:href="@{/contatos}">Listar</a>
-		         <li><a th:href="@{/contatos/novo}">Novo</a>
-		     </ul>
-	     </nav>
-     </header>
-     <main>
-         <section>
-                <h1>Seja Bem vindo</h1>
-         </section>
-     </main>
+    <header>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/contatos}">Listar</a></li>
+                <li><a th:href="@{/contatos/novo}">Novo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Seja Bem vindo</h1>
+        </section>
+    </main>
 </body>
+
 </html>

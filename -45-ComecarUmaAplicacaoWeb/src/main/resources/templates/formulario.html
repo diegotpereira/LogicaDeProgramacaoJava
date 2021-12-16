@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+
+    <!-- estilização -->
+    <link rel="stylesheet" th:href="@{/css/estilo.css}" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/contatos}">Listar</a></li>
+                <li><a th:href="@{/contatos/novo}">Novo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Cadastro de contatos</h1>
+        </section>
+
+        <section>
+            <form th:action="${contato.novo} ? @{/contatos} : @{/contatos/{contato}(contato=${contato.id})}" th:object="${contato}" th:method="${contato.novo} ? post : put">
+                <div th:if="${!contato.novo}">
+                    <label for="">Código: </label>
+
+                    <input th:field="*{id}" readonly="readonly" />
+                </div>
+
+                <div>
+                    <label for="">Nome: </label>
+
+                    <input th:field="*{nome}" />
+                </div>
+
+                <div>
+                    <label for="">Telefone: </label>
+
+                    <input th:field="*{telefone}" />
+                </div>
+
+                <div>
+                    <button>Salvar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
